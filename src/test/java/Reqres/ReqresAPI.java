@@ -9,6 +9,7 @@ import net.thucydides.core.annotations.Step;
 public class ReqresAPI {
     public static final String URL = "https://reqres.in";
     public static final String DIR = System.getProperty("user.dir");
+    public static final String JSON_FILE = DIR+"/src/test/resources/Json";
 
     public static String GET_LIST_USER = URL+"/api/users?page={page}";
     public static String POST_CREATE_USER = URL+"/api/users";

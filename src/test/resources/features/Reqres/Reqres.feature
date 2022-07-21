@@ -5,6 +5,7 @@ Feature: Request to API Reqres
     When Send request get list user
     Then Status code should be 200 OK
     And Response body should contain first name "<firstName>" and last name "<lastName>"
+    And Get list user assert json validation
   Examples:
     |parameter|firstName|lastName|
     |1        |George  |Bluth    |
@@ -15,6 +16,8 @@ Feature: Request to API Reqres
     When Send request post create user
     Then Status code should be 201 Created
     And Response body should contain name "Wisnu Munawar" and job "QA Engineer"
+    And Post create user assert json validation
+  @smoke @regression
   Scenario Outline: Put update user
     Given Put update user with id <id> and with valid json file
     When Send request put update user
