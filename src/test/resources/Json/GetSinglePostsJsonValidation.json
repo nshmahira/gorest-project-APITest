@@ -2,23 +2,23 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
   "properties": {
-    "name": {
-      "type": "string"
-    },
-    "job": {
-      "type": "string"
-    },
     "id": {
+      "type": "integer"
+    },
+    "user_id": {
+      "type": "integer"
+    },
+    "title": {
       "type": "string"
     },
-    "createdAt": {
+    "body": {
       "type": "string"
     }
   },
   "required": [
-    "name",
-    "job",
     "id",
-    "createdAt"
+    "user_id",
+    "title",
+    "body"
   ]
 }
