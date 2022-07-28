@@ -8,7 +8,7 @@ Feature: Request Comments to Gorest API
 
   @positive
   Scenario: GET Single Comments
-    Given Get single comments with id 13
+    Given Get single comments with id 25
     When Send request get single comments
     Then Status code should be 200 OK
     And Get single comments assert json validation
@@ -91,7 +91,7 @@ Feature: Request Comments to Gorest API
 
   Scenario: DELETE comments
     Given authorization bearer token
-    And Delete comments with id 13
+    And Delete comments with id 11
     When Send request delete comments
     Then Status code should be 204 No content
 

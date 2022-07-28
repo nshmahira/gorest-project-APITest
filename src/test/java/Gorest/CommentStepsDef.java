@@ -14,7 +14,7 @@ import java.io.File;
 
 import static org.hamcrest.Matchers.equalTo;
 
-public class GorestStepsDef {
+public class CommentStepsDef {
     @Steps
     GorestAPI gorestAPI;
 
