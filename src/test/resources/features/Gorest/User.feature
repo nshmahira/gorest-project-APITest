@@ -13,7 +13,7 @@ Feature: Request User to Gorest API
 
 
   Scenario: Get Single User
-    Given Get single user with id 12
+    Given Get single user with id 3330
     When Send request get single user
     Then Status code should be 200 OK
     And Get single user assert json validation
@@ -40,34 +40,33 @@ Feature: Request User to Gorest API
     Then Status code should be 404
 
   Scenario: Update Valid User
-    Given Put update user with id 12 and with valid json file
-    And authorization bearer token
+    Given authorization bearer token
+    And Put update user with id 3385 and with valid json file
     When Send request put update user
     Then Status code should be 200 OK
     And Get single user assert json validation
 
   Scenario: Update Invalid User
-    Given Put update user with id 12 and with valid json file
-    And authorization bearer token
+    Given authorization bearer token
+    And Put update user with id 3387 and with valid json file
     When Send request put update user
-    Then Status code should be 200 OK
-    And Get single user assert json validation
+    Then Status code should be 404
 
   Scenario: Update Valid User With Invalid Parameter
-    Given Put update user with id 12000 and with valid json file
-    And authorization bearer token
+    Given authorization bearer token
+    And Put update user with id 12000 and with valid json file
     When Send request put update user
     Then Status code should be 404
 
   Scenario: Delete User
-    Given Delete user with id 12
-    And authorization bearer token
+    Given authorization bearer token
+    And Delete user with id 3327
     When Send request delete user
     Then Status code should be 204 No content
 
   Scenario: Delete Invalid User
-    Given Delete user with id 1200000
-    And authorization bearer token
+    Given authorization bearer token
+    And Delete user with id 1200000
     When Send request delete user
     Then Status code should be 404
 

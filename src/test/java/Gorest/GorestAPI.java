@@ -47,6 +47,7 @@ public class GorestAPI {
     public void putUpdateUser(File json, int id){
         SerenityRest.given()
                 .pathParam("id",id)
+                .header("Authorization", "Bearer " + TOKEN)
                 .contentType(ContentType.JSON)
                 .body(json);
     }
@@ -54,7 +55,8 @@ public class GorestAPI {
     @Step("Delete user")
     public void deleteUser(int id){
         SerenityRest.given()
-                .pathParam("id",id);
+                .pathParam("id",id)
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
     @Step("Get single todos")
@@ -82,6 +84,7 @@ public class GorestAPI {
     @Step("Delete todos")
     public void deleteTodos(int id){
         SerenityRest.given()
-                .pathParam("id",id);
+                .pathParam("id",id)
+                .header("Authorization", "Bearer " + TOKEN);
     }
 }

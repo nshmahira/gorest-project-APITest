@@ -18,7 +18,7 @@ public class GorestStepsDef {
     @Steps
     GorestAPI gorestAPI;
 
-    @And("authorization bearer token")
+    @Given("authorization bearer token")
     public void authorizationBearerToken() {
         GorestAPI.TOKEN = "5a9b999e34e171cd705e77cc0dfd284652d5f85a1f1c25c3056e9991d246e55d";
 
@@ -169,7 +169,7 @@ public class GorestStepsDef {
 
     @Given("Put update user with id {int} and with valid json file")
     public void putUpdateUserWithIdAndWithValidJsonFile(int id) {
-        File jsonFiles = new File( GorestAPI.JSON_FILE+"/CreateAllUser.json");
+        File jsonFiles = new File( GorestAPI.JSON_FILE+"/CreateAllTodos.json");
         gorestAPI.putUpdateUser(jsonFiles,id);
     }
 

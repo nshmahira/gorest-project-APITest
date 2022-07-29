@@ -12,7 +12,7 @@ Feature: Request Todos to Gorest API
 
 
   Scenario: Get Single Todos
-    Given Get single todos with id 10
+    Given Get single todos with id 1632
     When Send request get single todos
     Then Status code should be 200 OK
     And Get single todos assert json validation
@@ -39,33 +39,33 @@ Feature: Request Todos to Gorest API
     Then Status code should be 404
 
   Scenario: Update Valid Todos
-    Given Put update user with id 12 and with valid json file
-    And authorization bearer token
+    Given  authorization bearer token
+    And Put update user with id 1650 and with valid json file
     When Send request put update todos
     Then Status code should be 200 OK
     And Get single todos assert json validation
 
   Scenario: Update Invalid Todos
-    Given Put update user with id 12 and with valid json file
-    And authorization bearer token
+    Given authorization bearer token
+    And Put update user with id 12 and with valid json file
     When Send request put update todos
-    Then Status code should be 200 OK
+    Then Status code should be 404
 
   Scenario: Update Valid Todos With Invalid Parameter
-    Given Put update user with id 1200000000 and with valid json file
-    And authorization bearer token
+    Given authorization bearer token
+    And Put update user with id 1200000000 and with valid json file
     When Send request put update todos
     Then Status code should be 404
 
   Scenario: Delete Todos
-    Given Delete todos with id 12
-    And authorization bearer token
+    Given authorization bearer token
+    And Delete todos with id 1625
     When Send request delete todos
     Then Status code should be 204 No content
 
   Scenario: Delete Invalid User
-    Given Delete todos with id 1200000
-    And authorization bearer token
+    Given authorization bearer token
+    And Delete todos with id 1200000
     When Send request delete todos
     Then Status code should be 404
 
