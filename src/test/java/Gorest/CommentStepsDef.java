@@ -112,7 +112,7 @@ public class CommentStepsDef {
 
     }
 
-    @When("post create comments with valid json file")
+    @When("post create comments with valid json file ")
     public void postCreateCommentstWithValidJsonFile() {
         File jsonFiles = new File( GorestAPI.JSON_FILE+"/PostCreateComments.json");
         gorestAPI.postCreateComments(jsonFiles);
@@ -197,5 +197,11 @@ public class CommentStepsDef {
     @When("Send request delete comments with id {int}")
     public void sendRequestDeleteCommentsWithId(int id) {
         gorestAPI.deleteComments(id);
+    }
+
+    @When("post create comments with valid json file")
+    public void postCreateCommentsWithValidJsonFile() {
+        File jsonFiles = new File( GorestAPI.JSON_FILE+"/PostCreateComments.json");
+        gorestAPI.postCreateComments(jsonFiles);
     }
 }
