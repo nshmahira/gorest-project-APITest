@@ -19,6 +19,15 @@ public class GorestAPI {
     public static String TOKEN;
     public static String POST_UPDATE_COMMENTS = URL+"/comments/";
     public static String DELETE_COMMENTS = URL+"/comments/{id}";
+    public static String GET_ALL_USERS = URL+"/users";
+    public static String GET_SINGLE_USER = URL+"/users/{id}";
+    public static String GET_INVALID = URL+"";
+    public static String PUT_UPDATE_USER = URL+"/users/{id}";
+    public static String DELETE_USER = URL+"/users/{id}";
+    public static String GET_ALL_TODOS = URL+"/todos";
+    public static String GET_SINGLE_TODOS = URL+"/todos/{id}";
+    public static String PUT_UPDATE_TODOS = URL+"/todos/{id}";
+    public static String DELETE_TODOS = URL+"/todos/{id}";
 
 
     @Step("Get all comments")
@@ -72,6 +81,44 @@ public class GorestAPI {
         SerenityRest.given()
                 .header("Authorization","Bearer "+TOKEN)
                 .pathParam ("id",id);
+    }
+
+    @Step("Put update user")
+    public void putUpdateUser(File json, int id){
+        SerenityRest.given()
+                .pathParam("id",id)
+                .header("Authorization", "Bearer " + TOKEN)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    @Step("Delete user")
+    public void deleteUser(int id){
+        SerenityRest.given()
+                .pathParam("id",id)
+                .header("Authorization", "Bearer " + TOKEN);
+    }
+
+    @Step("Get single todos")
+    public void getSingleTodos(int id){
+        SerenityRest.given()
+                .pathParam ("id",id);
+    }
+
+
+    @Step("Put update todos")
+    public void putUpdateTodos(File json, int id){
+        SerenityRest.given()
+                .pathParam("id",id)
+                .contentType(ContentType.JSON)
+                .body(json);
+    }
+
+    @Step("Delete todos")
+    public void deleteTodos(int id){
+        SerenityRest.given()
+                .pathParam("id",id)
+                .header("Authorization", "Bearer " + TOKEN);
     }
 
 }
