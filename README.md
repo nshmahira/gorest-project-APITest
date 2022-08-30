@@ -1,4 +1,4 @@
-# Getting started with REST API testing with Serenity and Cucumber 6
+# GOREST API TESTING WITH SERENITY BDD
 
 Gorest API Testing
 
