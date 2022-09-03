@@ -1,4 +1,5 @@
 Feature: Request Todos to Gorest API
+  @aufa
   Scenario: Get List Todos
     Given Get all todos with valid json file
     When Send request get todos

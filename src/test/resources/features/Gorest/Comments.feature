@@ -12,10 +12,6 @@ Feature: Request Comments to Gorest API
     When Send request get single comments
     Then Status code should be 200 OK
     And Get single comments assert json validation
-<<<<<<< HEAD
-
-=======
->>>>>>> ab2c0547ef97049a9a49499c618496466eeba1b7
 
   @negative @mahira
   Scenario: GET All Comments with invalid json file
@@ -31,12 +27,12 @@ Feature: Request Comments to Gorest API
     And Response body should contain message "Resource not found"
     And Get single comments invalid id assert json validation
 
-<<<<<<< HEAD
+
 
   @negative
-=======
+
   @negative @mahira
->>>>>>> ab2c0547ef97049a9a49499c618496466eeba1b7
+
   Scenario: GET Single Comments with invalid id
     Given Get single comments with id 12345
     When Send request get single comments
@@ -44,20 +40,8 @@ Feature: Request Comments to Gorest API
     And Response body should contain message "Resource not found"
     And Get single comments invalid id assert json validation
 
-<<<<<<< HEAD
-  Scenario: PUT Update comments without bearer token
-    When post create comments with valid json file
-    When Send request put update comments
-    Then Status code should be 401 unauthorized
-
-  Scenario: POST Create a new comments without bearer token
-    When post create comments with valid json file
-    When Send request post create a new comments
-    Then Status code should be 401 unauthorized
-
-=======
   @negative @mahira
->>>>>>> ab2c0547ef97049a9a49499c618496466eeba1b7
+
   Scenario: GET Single post with invalid id
     Given Get single posts with id 5554
     When Send request get single posts
@@ -91,11 +75,10 @@ Feature: Request Comments to Gorest API
     When Send request post create a new comments
     Then Status code should be 422 unprocessable
 
-<<<<<<< HEAD
-=======
+
 
   @positive @mahira
->>>>>>> ab2c0547ef97049a9a49499c618496466eeba1b7
+
   Scenario: PUT Update comments with valid json file
     Given authorization bearer token
     When put update comments with valid json file
@@ -109,17 +92,11 @@ Feature: Request Comments to Gorest API
     When Send request put update comments
     Then Status code should be 422 unprocessable
 
-<<<<<<< HEAD
 
-  Scenario: DELETE comments
-    Given authorization bearer token
-    And Delete comments with id 30
-=======
   @positive @mahira
   Scenario: DELETE comments
     Given authorization bearer token
-    And Delete comments with id 29
->>>>>>> ab2c0547ef97049a9a49499c618496466eeba1b7
+    And Delete comments with id 32
     When Send request delete comments
     Then Status code should be 204 No content
 

@@ -200,7 +200,7 @@ public class CommentStepsDef {
         gorestAPI.deleteComments(id);
     }
 
-<<<<<<< HEAD
+
     @Given("Get all user with valid json file")
     public void getAllUserWithValidJsonFile() {
         File jsonFiles = new File( GorestAPI.JSON_FILE+"/GetAllUser.json");
@@ -355,11 +355,11 @@ public class CommentStepsDef {
         SerenityRest.when().delete(GorestAPI.DELETE_USER);
     }
 
-=======
+
     @When("post create comments with valid json file")
     public void postCreateCommentsWithValidJsonFile() {
         File jsonFiles = new File( GorestAPI.JSON_FILE+"/PostCreateComments.json");
         gorestAPI.postCreateComments(jsonFiles);
     }
->>>>>>> ab2c0547ef97049a9a49499c618496466eeba1b7
+
 }

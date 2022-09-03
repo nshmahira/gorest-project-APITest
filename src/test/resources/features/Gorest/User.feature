@@ -1,5 +1,5 @@
 Feature: Request User to Gorest API
-
+@aufa
   Scenario: Get List User
     Given Get all user with valid json file
     When Send request get user
