@@ -1,6 +1,6 @@
 # GOREST API TESTING WITH SERENITY BDD
 
-Gorest API Testing
+Gorest API Testing using API mock gorest
 
 ## Want to learn more?
 For more information about Serenity BDD, you can read the [**Serenity BDD Book**](https://serenity-bdd.github.io/theserenitybook/latest/index.html), the official online Serenity documentation source. Other sources include:
